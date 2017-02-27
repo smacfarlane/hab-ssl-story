@@ -1,0 +1,2 @@
+# cat {{pkg.svc_path}}/config.toml
+cat {{pkg.svc_path}}/config/haproxy.conf

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+kitchen converge proxy
+kitchen converge backend -c

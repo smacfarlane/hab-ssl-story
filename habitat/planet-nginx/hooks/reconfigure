@@ -1,0 +1,3 @@
+chmod +x {{pkg.svc_data_path}}
+
+cp -a {{pkg.svc_config_path}}/index.html {{pkg.svc_data_path}}/index.html

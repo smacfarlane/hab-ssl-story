@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+      {{cfg.site_name}}
+    </title>
+  </head>
+
+  <body>
+    <h1>{{cfg.site_name}}</h1>
+    <h2>About Me</h2>
+    <pre>{{svc.me.service}} - {{svc.me.group}} - {{svc.me.sys.ip}}</pre>
+    <h3>Ring</h3>
+    <ul>
+    {{~#each svc.all}}
+      {{~#each members}}
+      <li>{{group}} - {{service}} - {{sys.ip}}</li>
+      {{~/each}}
+    {{~/each}}  
+    </ul>
+
+    <h3>Package Dependencies</h3>
+    <ul>
+      {{~#each pkg.deps}}
+      <li>{{origin}}/{{name}}/{{version}}/{{release}}
+      {{~/each}}
+    </ul>
+  </body>
+</html>

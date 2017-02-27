@@ -1,0 +1,72 @@
+---
+driver:
+  name: vagrant
+  synced_folders:
+    - [".", "/depot"]
+
+provisioner:
+  name: chef_zero
+<% if ENV['AUTOMATE_URL'] %>
+  client_rb:
+    data_collector.server_url: "<%= ENV['AUTOMATE_URL'] %>/data-collector/v0/"
+    data_collector.token: "93a49a4f2482c64126f7b6015e6b0f30284287ee4054ff8807fb63d9cbd1c506"
+    data_collector.raise_on_failure: false
+    ssl_verify_mode: ":verify_none"
+    verify_api_cert: false
+<% end %>
+
+platforms:
+  - name: centos-7.2
+    attributes:
+      audit:
+        collector: chef-visibility
+        profiles: 
+        - path: /etc/chef/inspec
+
+verifier:
+  name: inspec
+  inspec_tests:
+  - name: local
+    path: test/integration/default
+
+suites:
+  - name: proxy
+    driver:
+      network:
+        - ["private_network", {ip: "192.168.33.30"}]
+    run_list:
+    - planet_express::proxy
+    - audit::default
+    attributes:
+  - name: backend-0
+    driver:
+      network:
+      - ["private_network", {ip: "192.168.33.60"}]
+    run_list:
+    - planet_express::backend
+    - audit::default
+    attributes:
+  - name: backend-1
+    driver:
+      network:
+      - ["private_network", {ip: "192.168.33.61"}]
+    run_list:
+    - planet_express::backend
+    - audit::default
+    attributes:
+  - name: backend-2
+    driver:
+      network:
+      - ["private_network", {ip: "192.168.33.62"}]
+    run_list:
+    - planet_express::backend
+    - audit::default
+    attributes: 
+  # - name: backend-3
+  #   driver:
+  #     network:
+  #     - ["private_network", {ip: "192.168.33.63"}]
+  #   run_list:
+  #   - planet_express::backend
+  #   - audit::default
+  #   attributes:

@@ -1,0 +1,17 @@
+DEPENDENCIES
+  depot (~> 0.3.0)
+  planet_express
+    path: cookbooks/planet_express
+
+GRAPH
+  audit (2.3.5)
+    compat_resource (>= 0.0.0)
+  compat_resource (12.16.3)
+  depot (0.3.0)
+    habitat (~> 0.3.0)
+  habitat (0.3.0)
+  hostsfile (2.4.5)
+  planet_express (0.1.0)
+    audit (>= 0.0.0)
+    habitat (>= 0.0.0)
+    hostsfile (>= 0.0.0)

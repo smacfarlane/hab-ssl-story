@@ -1,0 +1,7 @@
+cp -a {{pkg.svc_config_path}}/index.html {{pkg.svc_data_path}}/index.html
+
+mkdir -p {{pkg.svc_var_path}}/fastcgi
+mkdir -p {{pkg.svc_var_path}}/scgi
+mkdir -p {{pkg.svc_var_path}}/uwcgi
+
+chmod +x {{pkg.svc_data_path}}
