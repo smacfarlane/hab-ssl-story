@@ -19,7 +19,7 @@ platforms:
   - name: centos-7.2
     attributes:
       audit:
-        collector: chef-visibility
+        collector: <%= !!ENV['AUTOMATE_URL'] ? 'chef-visibility' : 'json' %>
         profiles: 
         - path: /etc/chef/inspec
 
