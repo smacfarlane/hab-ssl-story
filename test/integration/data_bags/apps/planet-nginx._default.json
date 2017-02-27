@@ -1,7 +1,7 @@
 {
   "id": "planet-nginx._default",
-  "version": "0",
+  "version": "1",
   "config": {
-
+    "site_name": "Habitat Express"
   }
 }
