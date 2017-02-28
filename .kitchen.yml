@@ -46,6 +46,7 @@ suites:
     - planet_express::backend
     - audit::default
     attributes:
+      public_ip: 192.168.33.60
   - name: backend-1
     driver:
       network:
@@ -54,6 +55,7 @@ suites:
     - planet_express::backend
     - audit::default
     attributes:
+      public_ip: 192.168.33.61
   - name: backend-2
     driver:
       network:
@@ -62,6 +64,7 @@ suites:
     - planet_express::backend
     - audit::default
     attributes: 
+      public_ip: 192.168.33.62
   # - name: backend-3
   #   driver:
   #     network:
