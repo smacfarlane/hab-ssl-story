@@ -19,13 +19,18 @@
 
 ---
 
+### Oh wait... 
+(https://github.com/chef-cft/habdemo)
+
+---
+
 ### Second pass
 #### What story are we trying to tell?
 
-* Show for systems out of compliance
+* Show systems out of compliance
 * Remediate 
 * Workflow
-* ![underpants-gnomes](https://media.tenor.co/images/9ab2c9c1e37aa83f6e1782d94816087a/raw)
+![underpants-gnomes](https://media.tenor.co/images/9ab2c9c1e37aa83f6e1782d94816087a/raw)
 
 ---
 
@@ -42,11 +47,16 @@
 
 ### Patching SSL
 
-#### Updating configuration is fine, but OpenSSL needs to be patched
+![tirefire](https://github.com/tirefire/tirefi.re/raw/master/chef/chef_kitchen_fire.gif)
 
+---
+
+* Show update strategies
+  * Use channels to control what groups get updates
 * Need(*) a private depot to show topologies
   * (*) So we don't clutter the public depot
 * Build service still under development
+  * Can fake it by having things pre-baked
 
 ---
 
@@ -60,4 +70,7 @@
 
 ---
 
-###
+### Musings
+
+* If I ever have to sysadmin again, Habitat is how I want to work
+* Habitat is like workflow, it may not make sense if you haven't felt the pain that it addresses
