@@ -1,0 +1,13 @@
+version: '2'
+services:
+  proxy:
+    image: $HAB_ORIGIN/planet-haproxy
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9000:9000"
+      - "9001:9001"
+    command: start $HAB_ORIGIN/planet-haproxy --bind backend:planet-haproxy.default 
+  web:
+    image: $HAB_ORIGIN/planet-nginx
+    command: start $HAB_ORIGIN/planet-nginx --peer proxy --topology leader

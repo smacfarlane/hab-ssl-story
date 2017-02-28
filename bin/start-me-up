@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export AUTOMATE_URL="http://$(ipconfig getifaddr en0)"
+#export AUTOMATE_URL=http://    
 
 kitchen converge proxy
 kitchen converge backend -c
