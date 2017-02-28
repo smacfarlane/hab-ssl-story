@@ -3,8 +3,8 @@
 # You can safely delete this file if you don't need it.
 maxconn = 32
 mode = "http"
-bind_port = "80"
-bind_ssl_port = "443"
+bind = "0.0.0.0:80"
+bind_ssl = "0.0.0.0:443"
 httpchk = "GET /"
 
 status_page = true

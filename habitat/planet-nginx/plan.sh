@@ -63,6 +63,7 @@ pkg_shasum=TODO
 pkg_deps=(core/nginx core/openssl)
 pkg_svc_user="root"
 pkg_exports=(
+  [ip]=ip
   [port]=nginx.http.listen.port
 )
 pkg_exposes=(port)
