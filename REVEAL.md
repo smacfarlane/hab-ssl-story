@@ -4,6 +4,14 @@
 
 ---
 
+## Before we start 
+
+> Habitat is a new technology to build, deploy and manage applications in any environment, from traditional datacenters to containerized microservices
+>
+> -- <cite> Nell Shamrell-Harrington </cite>
+
+---
+
 ### First pass
 #### Replicate bjc_ecommerce 1:1
 
@@ -70,7 +78,6 @@
 
 ---
 
-### Musings
+## Nell's presentation on Habitat
 
-* If I ever have to sysadmin again, Habitat is how I want to work
-* Habitat is like workflow, it may not make sense if you haven't felt the pain that it addresses
+https://youtu.be/_04aLq1VuYg
