@@ -81,3 +81,7 @@
 ## Nell's presentation on Habitat
 
 https://youtu.be/_04aLq1VuYg
+
+---
+
+https://github.com/smacfarlane/hab-ssl-story
